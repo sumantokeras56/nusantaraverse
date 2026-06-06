@@ -1,17 +1,22 @@
 "use client";
 
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-
-const data = [
-  { name: "Aulia", score: 90 },
-  { name: "Ghufran", score: 82 },
-  { name: "Nabila", score: 76 },
-  { name: "Rafi", score: 74 },
-  { name: "Dinda", score: 88 },
-  { name: "Aqil", score: 68 }
-];
+import { getAssessmentByType } from "@/lib/demoStore";
+import { useDemoProgress } from "@/hooks/useDemoProgress";
 
 export function TeacherChart() {
+  const { progress } = useDemoProgress();
+  const post = getAssessmentByType(progress, "post");
+
+  const data = [
+    { name: "Aulia", score: 90 },
+    { name: progress.user.name, score: post?.percentage ?? 82 },
+    { name: "Nabila", score: 76 },
+    { name: "Rafi", score: 74 },
+    { name: "Dinda", score: 88 },
+    { name: "Aqil", score: 68 }
+  ];
+
   return (
     <div className="smooth-card p-5">
       <div className="mb-4">
@@ -23,7 +28,7 @@ export function TeacherChart() {
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
-            <YAxis />
+            <YAxis domain={[0, 100]} />
             <Tooltip />
             <Bar dataKey="score" radius={[10, 10, 0, 0]} />
           </BarChart>

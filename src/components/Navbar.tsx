@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Compass, GraduationCap, LayoutDashboard, Trophy } from "lucide-react";
+import { ClipboardCheck, Compass, GraduationCap, LayoutDashboard, Trophy } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -9,9 +9,12 @@ export function Navbar() {
           <span className="grid h-10 w-10 place-items-center rounded-2xl bg-nusantara-navy text-white">NV</span>
           <span className="text-xl">Nusantaraverse</span>
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
+        <nav className="hidden items-center gap-5 text-sm font-medium text-slate-600 md:flex">
           <Link href="/student/dashboard" className="flex items-center gap-2 hover:text-nusantara-blue">
             <Compass size={17} /> Siswa
+          </Link>
+          <Link href="/student/assessment" className="flex items-center gap-2 hover:text-nusantara-blue">
+            <ClipboardCheck size={17} /> Tes
           </Link>
           <Link href="/teacher/dashboard" className="flex items-center gap-2 hover:text-nusantara-blue">
             <LayoutDashboard size={17} /> Guru

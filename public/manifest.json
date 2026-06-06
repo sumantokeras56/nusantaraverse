@@ -1,10 +1,11 @@
 {
   "name": "Nusantaraverse",
-  "short_name": "Nusantara",
-  "description": "Platform eksplorasi pembelajaran Indonesia berbasis AI, simulasi, gamifikasi, dan analitik.",
+  "short_name": "NVerse",
+  "description": "Platform pembelajaran Indonesia berbasis eksplorasi, AI Tutor, simulasi keputusan, gamifikasi, dan dashboard guru.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0f2942",
+  "background_color": "#eef7fb",
   "theme_color": "#0f2942",
   "icons": [
     {

@@ -1,21 +1,27 @@
 import Link from "next/link";
-import { Bot, Compass, Home, LayoutDashboard, Map, Trophy } from "lucide-react";
+import { BarChart3, Bot, ClipboardCheck, Compass, FileDown, Home, LayoutDashboard, Map, RotateCcw, Trophy } from "lucide-react";
+
+export type SidebarRole = "student" | "teacher";
 
 type SidebarProps = {
-  role: "student" | "teacher";
+  role: SidebarRole;
 };
 
 export function Sidebar({ role }: SidebarProps) {
   const studentItems = [
     { href: "/student/dashboard", label: "Beranda", icon: Home },
     { href: "/student/explore", label: "Eksplorasi", icon: Map },
+    { href: "/student/assessment", label: "Pre/Post Test", icon: ClipboardCheck },
     { href: "/student/ai-tutor", label: "AI Tutor", icon: Bot },
+    { href: "/student/progress", label: "Progress", icon: BarChart3 },
+    { href: "/student/virtual", label: "Virtual", icon: Compass },
     { href: "/leaderboard", label: "Leaderboard", icon: Trophy }
   ];
 
   const teacherItems = [
     { href: "/teacher/dashboard", label: "Dashboard", icon: LayoutDashboard },
-    { href: "/student/dashboard", label: "Mode Siswa", icon: Compass },
+    { href: "/teacher/report", label: "Laporan", icon: FileDown },
+    { href: "/student/dashboard", label: "Mode Siswa", icon: RotateCcw },
     { href: "/leaderboard", label: "Leaderboard", icon: Trophy }
   ];
 
@@ -41,6 +47,9 @@ export function Sidebar({ role }: SidebarProps) {
           );
         })}
       </nav>
+      <div className="mt-8 rounded-3xl bg-white/10 p-4 text-xs leading-5 text-white/70">
+        MVP V2: progress, chat, skor, asesmen, dan laporan tersimpan lokal untuk demo stabil tanpa database.
+      </div>
     </aside>
   );
 }

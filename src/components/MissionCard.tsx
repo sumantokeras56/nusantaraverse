@@ -1,17 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import { ArrowRight, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Clock, Sparkles } from "lucide-react";
 import type { Mission } from "@/types";
 import { getLocationById } from "@/data/locations";
+import { useDemoProgress } from "@/hooks/useDemoProgress";
 
 type MissionCardProps = {
   mission: Mission;
 };
 
 export function MissionCard({ mission }: MissionCardProps) {
+  const { progress } = useDemoProgress();
   const location = getLocationById(mission.locationId);
+  const completed = progress.completedMissionIds.includes(mission.id);
 
   return (
-    <article className="smooth-card overflow-hidden transition hover:-translate-y-1 hover:shadow-xl">
+    <article className={`smooth-card overflow-hidden transition hover:-translate-y-1 hover:shadow-xl ${completed ? "ring-2 ring-emerald-200" : ""}`}>
       <div className="flex h-28 items-center gap-4 bg-gradient-to-br from-nusantara-navy to-nusantara-green p-5 text-white">
         <span className="text-5xl">{location?.imageEmoji ?? "🌏"}</span>
         <div>
@@ -29,12 +34,17 @@ export function MissionCard({ mission }: MissionCardProps) {
             <Clock size={14} /> {mission.estimatedTime}
           </span>
           <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-600">{mission.difficulty}</span>
+          {completed ? (
+            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 text-emerald-700">
+              <CheckCircle2 size={14} /> Selesai
+            </span>
+          ) : null}
         </div>
         <Link
           href={`/student/mission/${mission.id}`}
           className="mt-5 inline-flex items-center gap-2 rounded-full bg-nusantara-navy px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
         >
-          Mulai Misi <ArrowRight size={16} />
+          {completed ? "Ulangi Misi" : "Mulai Misi"} <ArrowRight size={16} />
         </Link>
       </div>
     </article>

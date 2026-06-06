@@ -4,36 +4,43 @@ export const badges: Badge[] = [
   {
     id: "penjelajah-aceh",
     name: "Penjelajah Aceh",
-    description: "Menyelesaikan misi pertama di wilayah Aceh.",
+    description: "Memulai eksplorasi wilayah Aceh dan memahami konteks lokal.",
     icon: "⛰️",
-    xpRequired: 100
+    xpRequired: 1000
   },
   {
     id: "pecinta-alam",
     name: "Pecinta Alam",
-    description: "Memahami isu konservasi dan lingkungan.",
+    description: "Menunjukkan kepedulian terhadap konservasi dan ekosistem.",
     icon: "🌿",
-    xpRequired: 300
+    xpRequired: 1200
   },
   {
     id: "pengambil-keputusan",
     name: "Pengambil Keputusan Hebat",
-    description: "Menyelesaikan simulasi berbasis dampak.",
-    icon: "🏅",
-    xpRequired: 400
+    description: "Menyelesaikan simulasi dengan pertimbangan berbagai dampak.",
+    icon: "🏆",
+    xpRequired: 1400
   },
   {
     id: "sahabat-budaya",
     name: "Sahabat Budaya",
-    description: "Menyelesaikan misi budaya dan sejarah.",
+    description: "Menghargai sejarah, budaya, dan kearifan lokal Indonesia.",
     icon: "🏛️",
-    xpRequired: 500
+    xpRequired: 1600
   },
   {
     id: "penjaga-ekosistem",
     name: "Penjaga Ekosistem",
-    description: "Menunjukkan pemahaman keberlanjutan.",
+    description: "Memahami hubungan antara pembangunan dan keberlanjutan.",
     icon: "🛡️",
-    xpRequired: 700
+    xpRequired: 1800
+  },
+  {
+    id: "mentor-digital",
+    name: "Mentor Digital",
+    description: "Aktif menggunakan AI Tutor dan asesmen digital secara bertanggung jawab.",
+    icon: "🤖",
+    xpRequired: 2100
   }
 ];

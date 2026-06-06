@@ -163,3 +163,22 @@ Nanti bisa diganti dengan Supabase Auth atau Firebase Auth.
 ---
 
 **Tagline:** Belajar Indonesia, Menjelajahi Indonesia, Berdampak untuk Indonesia.
+
+
+## Update V2 — Fitur Demo Lengkap
+
+Versi ini sudah dilengkapi dengan penyimpanan progress lokal, pre-test/post-test, simulasi untuk semua misi, riwayat AI Tutor, dashboard guru dinamis, laporan CSV, leaderboard dinamis, dan PWA dasar.
+
+### Alur Demo Cepat
+
+1. Buka `/login` dan pilih siswa.
+2. Kerjakan `/student/assessment` sebagai pre-test.
+3. Buka `/student/dashboard` dan pilih misi.
+4. Jalankan simulasi, klik simpan progress.
+5. Tanya AI Tutor di `/student/ai-tutor`.
+6. Kerjakan post-test.
+7. Buka `/teacher/dashboard` dan `/teacher/report`.
+
+### Catatan
+
+Data masih disimpan dengan localStorage supaya aman untuk demo tanpa konfigurasi database.

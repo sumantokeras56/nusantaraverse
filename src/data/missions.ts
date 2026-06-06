@@ -2,11 +2,24 @@ import type { Mission } from "@/types";
 
 export const missions: Mission[] = [
   {
+    id: "misi-aceh",
+    locationId: "aceh",
+    title: "Museum Tsunami dan Ketangguhan Aceh",
+    description: "Pelajari mitigasi bencana, sejarah, dan strategi kesiapsiagaan masyarakat pesisir.",
+    objectives: [
+      "Menjelaskan pentingnya mitigasi tsunami.",
+      "Menganalisis peran edukasi bencana dalam mengurangi risiko.",
+      "Menyusun tindakan kesiapsiagaan di sekolah dan masyarakat."
+    ],
+    xpReward: 170,
+    difficulty: "Sedang",
+    estimatedTime: "18 menit"
+  },
+  {
     id: "misi-rawa-singkil",
     locationId: "rawa-singkil",
     title: "Konservasi Orangutan di Rawa Singkil",
-    description:
-      "Pelajari hubungan antara hutan gambut, orangutan, masyarakat lokal, dan keputusan pembangunan.",
+    description: "Pelajari hubungan antara hutan gambut, orangutan, masyarakat lokal, dan keputusan pembangunan.",
     objectives: [
       "Menjelaskan fungsi ekosistem rawa gambut.",
       "Mengidentifikasi ancaman terhadap orangutan.",
@@ -20,8 +33,7 @@ export const missions: Mission[] = [
     id: "misi-borobudur",
     locationId: "borobudur",
     title: "Sejarah dan Pelestarian Borobudur",
-    description:
-      "Jelajahi nilai sejarah Borobudur dan bagaimana pariwisata dapat dikembangkan secara berkelanjutan.",
+    description: "Jelajahi nilai sejarah Borobudur dan bagaimana pariwisata dapat dikembangkan secara berkelanjutan.",
     objectives: [
       "Mengenali nilai sejarah Borobudur.",
       "Memahami tantangan pelestarian situs budaya.",
@@ -32,11 +44,38 @@ export const missions: Mission[] = [
     estimatedTime: "15 menit"
   },
   {
+    id: "misi-kalimantan",
+    locationId: "kalimantan",
+    title: "Hutan Tropis dan Masyarakat Adat Kalimantan",
+    description: "Pelajari biodiversitas hutan tropis, masyarakat adat, dan pilihan pembangunan yang adil.",
+    objectives: [
+      "Menjelaskan fungsi hutan tropis.",
+      "Menganalisis dampak pembukaan lahan.",
+      "Menghargai peran masyarakat adat dalam konservasi."
+    ],
+    xpReward: 180,
+    difficulty: "Sedang",
+    estimatedTime: "20 menit"
+  },
+  {
+    id: "misi-bali",
+    locationId: "bali",
+    title: "Pariwisata Berkelanjutan di Bali",
+    description: "Pahami bagaimana budaya, ekonomi, dan lingkungan saling memengaruhi dalam pembangunan pariwisata.",
+    objectives: [
+      "Menjelaskan manfaat ekonomi pariwisata.",
+      "Menganalisis tantangan sampah dan lingkungan.",
+      "Menyusun sikap wisatawan bertanggung jawab."
+    ],
+    xpReward: 160,
+    difficulty: "Mudah",
+    estimatedTime: "15 menit"
+  },
+  {
     id: "misi-raja-ampat",
     locationId: "raja-ampat",
     title: "Ekosistem Terumbu Karang Raja Ampat",
-    description:
-      "Pelajari keanekaragaman laut, ancaman ekosistem, dan strategi wisata bahari bertanggung jawab.",
+    description: "Pelajari keanekaragaman laut, ancaman ekosistem, dan strategi wisata bahari bertanggung jawab.",
     objectives: [
       "Menjelaskan peran terumbu karang.",
       "Mengidentifikasi ancaman terhadap ekosistem laut.",
@@ -47,19 +86,18 @@ export const missions: Mission[] = [
     estimatedTime: "20 menit"
   },
   {
-    id: "misi-bali",
-    locationId: "bali",
-    title: "Pariwisata Berkelanjutan di Bali",
-    description:
-      "Pahami bagaimana budaya, ekonomi, dan lingkungan saling memengaruhi dalam pembangunan pariwisata.",
+    id: "misi-merauke",
+    locationId: "merauke",
+    title: "Pangan Lokal dan Keberlanjutan Merauke",
+    description: "Pahami ketahanan pangan, budaya lokal, dan tata kelola sumber daya di wilayah timur Indonesia.",
     objectives: [
-      "Menjelaskan manfaat ekonomi pariwisata.",
-      "Menganalisis tantangan sampah dan lingkungan.",
-      "Menyusun sikap wisatawan bertanggung jawab."
+      "Menjelaskan pentingnya pangan lokal.",
+      "Menganalisis hubungan pangan, budaya, dan lingkungan.",
+      "Menyusun rekomendasi pembangunan yang menghormati masyarakat lokal."
     ],
-    xpReward: 160,
-    difficulty: "Mudah",
-    estimatedTime: "15 menit"
+    xpReward: 170,
+    difficulty: "Sedang",
+    estimatedTime: "18 menit"
   }
 ];
 
